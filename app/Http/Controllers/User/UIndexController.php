@@ -44,7 +44,7 @@ class UIndexController extends Controller
             ->get();
         $sliders=Slider::where('published', 1)->orderBy("hit")->get();
         $references=References::where('published', 1)->orderBy("hit")->get();
-        return view('User.index', compact('references', 'sliders','blogs'));
+        return view('user.index', compact('references', 'sliders','blogs'));
 
     }
 
