@@ -186,7 +186,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('contacts', $contacts);
         });
 
-        View::composer(['user.partial.header', 'user.partial.footer', 'user.partial.head', 'User.index'], function ($view) {
+        View::composer(['user.partial.header', 'user.partial.footer', 'user.partial.head', 'user.index'], function ($view) {
             $siteSetting = SiteSettings::first();
             $view->with('siteSetting', $siteSetting);
         });
